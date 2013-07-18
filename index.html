@@ -1,0 +1,120 @@
+<!DOCTYPE HTML>
+<html lang = "de-DE">
+<head>
+  	<title>Flying Juggmen - Bonn</title>
+  	<meta charset = "utf-8" />
+  	<meta http-equiv="X-UA-Compatible" content="chrome=1">
+	<link href='http://fonts.googleapis.com/css?family=Open+Sans:400,600,300,700' rel='stylesheet' type='text/css'>
+	<link href='http://fonts.googleapis.com/css?family=IM+Fell+English' rel='stylesheet' type='text/css'>
+	<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1.0, user-scalable=no"/>
+	<link href="css/style.css" rel="stylesheet" type="text/css" />	
+	<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.6.2/jquery.min.js"></script>
+	
+	<script type="text/javascript">
+		function scrollToTop() {
+		$('html, body').animate({scrollTop:0}, 'slow');
+		}
+	</script>
+
+	<script>
+	 // DOM ready
+	 $(function() {
+	   
+      // Create the dropdown base
+      $("<select />").appendTo("nav");
+      
+      // Create default option "Go to..."
+      $("<option />", {
+         "selected": "selected",
+         "value"   : "",
+         "text"    : "Go to..."
+      }).appendTo("nav select");
+      
+      // Populate dropdown with menu items
+      $("nav a").each(function() {
+       var el = $(this);
+       $("<option />", {
+           "value"   : el.attr("href"),
+           "text"    : el.text()
+       }).appendTo("nav select");
+      });
+      
+	   // To make dropdown actually work
+	   // To make more unobtrusive: http://css-tricks.com/4064-unobtrusive-page-changer/
+      $("nav select").change(function() {
+        window.location = $(this).find("option:selected").val();
+      });
+	 
+	 });
+	</script>
+</head>
+
+<body>
+	<header>
+		<img src="img/header.png" alt="">
+	</header>
+
+  <nav> 
+  	
+  	<ul> 
+  		<li><a href="#" class="active">Home</a></li> 
+  		<li><a href="ueber-uns.html">Über uns</a></li> 
+  		<li><a href="training.html">Training</a></li> 
+  		<li><a href="galerie.html">Galerie</a></li> 
+  		<li><a href="erfolge.html">Erfolge</a></li> 
+  		<li><a href="kontakt.html">Kontakt</a></li> 
+    </ul>
+  	
+  </nav>
+
+	<div class="content">
+		<div class="wrapper">
+			<h3 class="index-headline">Willkommen bei den Flying Juggmen</h3>
+			<video width="90%" height="90%" poster="img/vorschaubild.jpg" controls="controls">
+	        	<source src="video/intro.ogv" type="video/ogg">
+	        	<source src="video/intro.mp4" type="video/mp4">
+			</video>
+
+			<div class="intro-text">
+				<p>
+					Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren.	Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren.
+				</p>
+			</div>
+
+			<div class="intro-text">
+				<p>
+					Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren.
+				</p>
+				<p>
+					Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren.
+				</p>
+			</div>
+			<div class="clear"></div>
+			<p>&nbsp;</p><p>&nbsp;</p>
+          	<a href="javascript:scrollToTop()" class="toplink">nach oben</a>
+
+		</div>
+	</div>
+  
+  	<div class="footer-img">  		
+		<img src="img/footer-bg.png" alt="">
+  	</div>
+  	<footer>  		
+  		<div class="wrapper">
+  			<div class="footer-text">
+				<p>
+					Flying Juggmen
+				</p>
+				<p>
+					Training: Mo 17:30 Uhr + Do 17:30 Uhr
+				</p>
+				<p>
+					Kontakt: info@flying-juggmen.de
+				</p>
+			</div>
+		</div>
+  	</footer>
+  	<div class="clear"></div>
+
+  </body>
+</html>
